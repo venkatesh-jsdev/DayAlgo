@@ -9,5 +9,8 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-router.route('/api')
+router.route('/api/login')
 .get(upstox.upstoxGET);
+
+router.route('/api/redirect')
+.all(upstox.AUTH_REDIRECT);
